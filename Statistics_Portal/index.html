@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Statistics & Analytics Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-chart-pie"></i> StatPortal</h2>
+        </div>
+        <ul class="nav-links">
+            <li class="active" data-target="module-4"><i class="fas fa-wave-square"></i> Probability Dist.</li>
+            <li data-target="module-5"><i class="fas fa-project-diagram"></i> Correlation & Reg.</li>
+            <li data-target="module-6"><i class="fas fa-calculator"></i> Maths for Data Sci.</li>
+            <li data-target="theory-section"><i class="fas fa-book-open"></i> Theory Questions</li>
+            <li data-target="quiz-section"><i class="fas fa-tasks"></i> 30 MCQs Quiz</li>
+        </ul>
+        <div class="sidebar-footer">
+            <button id="view-pdf-btn" class="btn primary-btn"><i class="fas fa-file-pdf"></i> View PDFs</button>
+        </div>
+    </nav>
+
+    <main class="content-area">
+        <section id="module-4" class="content-section active">
+            <h1>Probability & Probability Distributions</h1>
+            <div class="card">
+                <h2>4.6 Continuous Distribution: Normal Distribution</h2>
+                <p>The Normal curve represents a perfectly symmetrical distribution. A key concept is the Empirical Rule (68-95-99.7):</p>
+                <ul>
+                    <li><strong>68%</strong> of data falls within 1 standard deviation (μ ± σ).</li>
+                    <li><strong>95%</strong> of data falls within 2 standard deviations (μ ± 2σ).</li>
+                    <li><strong>99.7%</strong> of data falls within 3 standard deviations (μ ± 3σ).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>4.7 Odds Ratio & 4.8 Poisson Distribution</h2>
+                <p><strong>Odds Ratio (OR):</strong> Calculated as (a×d)/(b×c). An OR > 1 means exposure increases risk.</p>
+                <p><strong>Poisson Distribution:</strong> Used for rare events/counts. The mean equals the variance (λ). Excel: <code>POISSON.DIST</code>.</p>
+            </div>
+        </section>
+
+        <section id="module-5" class="content-section">
+            <h1>Correlation & Regression</h1>
+            <div class="card">
+                <h2>5.1 to 5.4 Meaning & Analysis</h2>
+                <p><strong>Correlation (r):</strong> Ranges from -1 to 1. Measures the strength and direction of a linear association. Found via <code>CORREL</code> in Excel.</p>
+                <p><strong>Regression:</strong> Models relationship to predict dependent variable (response) based on independent variable (predictor).</p>
+                <div class="formula-box">
+                    Equation: <strong>Y = a + bX</strong><br>
+                    (a = Intercept, b = Slope)
+                </div>
+            </div>
+        </section>
+
+        <section id="module-6" class="content-section">
+            <h1>Maths For Data Science</h1>
+            <div class="card">
+                <h2>6.1 Outliers & Boxplots</h2>
+                <p><strong>IQR:</strong> Q3 - Q1. Lower whisker = Q1 - 1.5×IQR. Boxplots identify these outliers visually.</p>
+            </div>
+            <div class="card">
+                <h2>6.3 to 6.7 Missing Value Treatment</h2>
+                <ul>
+                    <li><strong>Listwise:</strong> Deletes entire row if any data is missing.</li>
+                    <li><strong>Pairwise:</strong> Uses maximum available data.</li>
+                    <li><strong>Imputation:</strong> Mean (bad for skewed data), Median (best for skewed), Mode (categorical).</li>
+                    <li><strong>KNN (K-Nearest Neighbors):</strong> Uses similar records to keep relationships intact.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="theory-section" class="content-section">
+            <h1>Theory Questions Bank</h1>
+            <div class="card">
+                <h2>2 Marks - Definitions / Short Answers</h2>
+                <ul>
+                    <li><strong>4.6 Normal:</strong> State any 2 properties of Normal Distribution.</li>
+                    <li><strong>4.6 Normal:</strong> What is 68-95-99.7 rule in 1 line?</li>
+                    <li><strong>4.7 Odds Ratio:</strong> Define Odds Ratio. Formula OR = (a×d)/(b×c).</li>
+                    <li><strong>4.7 Odds Ratio:</strong> If OR=1, what does it mean?</li>
+                    <li><strong>5.1 Correlation:</strong> Define Correlation in 2 lines.</li>
+                    <li><strong>5.1 Regression:</strong> Define Regression. What is dependent variable?</li>
+                    <li><strong>5.2 Correlation:</strong> What is Positive vs Negative correlation? 1 example each.</li>
+                    <li><strong>5.3 Regression:</strong> What is Simple Linear Regression? Write equation y = a + bx.</li>
+                    <li><strong>6.1 Outlier:</strong> What is an Outlier?</li>
+                    <li><strong>6.3 Missing Value:</strong> What is Listwise deletion? 1 disadvantage.</li>
+                    <li><strong>6.3 Missing Value:</strong> What is Pairwise deletion? 1 advantage.</li>
+                    <li><strong>6.4 Imputation:</strong> When do we use Mean vs Median imputation?</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>3 & 4 Marks - Explain / Difference / Excel</h2>
+                <ul>
+                    <li><strong>4.6 Normal:</strong> Explain 68-95-99.7 rule with μ=100, σ=15. Give ranges.</li>
+                    <li><strong>5.1:</strong> Difference between Correlation and Regression - any 3 points.</li>
+                    <li><strong>5.4 Regression:</strong> In y = a + bx, what do 'b' (slope) and 'a' (intercept) represent?</li>
+                    <li><strong>4.6 Normal Excel:</strong> Write <code>NORM.DIST</code> formula syntax. What does cumulative=TRUE vs FALSE do?</li>
+                    <li><strong>6.7 KNN Imputation:</strong> What is KNN Imputation? Write 2 advantages over Mean imputation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="quiz-section" class="content-section">
+            <h1>Interactive Knowledge Assessment (30 MCQs)</h1>
+            <p>Select your answers below. Your results will be graded automatically.</p>
+            <div class="quiz-container" id="quiz-container">
+                </div>
+            <div class="quiz-controls">
+                <button id="submit-quiz" class="btn primary-btn" style="font-size: 1.2rem; padding: 15px 30px;">Submit All Answers</button>
+                <button id="reset-quiz" class="btn secondary-btn">Reset Quiz</button>
+            </div>
+            <div id="quiz-results" class="quiz-results hidden">
+                <h3>Final Score: <span id="score">0</span>/30</h3>
+            </div>
+        </section>
+        
+        <section id="pdf-section" class="content-section">
+            <h1>Course Material PDFs</h1>
+            <div class="pdf-controls" style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <button id="load-pdf-1" class="btn primary-btn">1. Statistics Material</button>
+                <button id="load-pdf-2" class="btn secondary-btn">2. MCQs & Theory</button>
+                <button id="fullscreen-btn" class="btn" style="background: #2b2d42; color: white; margin-left: auto;">
+                    <i class="fas fa-expand"></i> Go Fullscreen
+                </button>
+            </div>
+            <div class="pdf-container" style="height: 75vh; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <iframe id="pdf-iframe" src="pdfs/Statistics_Analytics.pdf" width="100%" height="100%" style="border: none;" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
